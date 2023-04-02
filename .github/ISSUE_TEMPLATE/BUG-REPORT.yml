@@ -1,80 +1,80 @@
-nombre: "🐛 Informe de error"
-descripción: Crea un nuevo ticket para un error.
-título: "🐛 [ERROR] - <título>"
-etiquetas: [
-  "error"
+name: "🐛 Bug Report"
+description: Create a new ticket for a bug.
+title: "🐛 [BUG] - <title>"
+labels: [
+  "bug"
 ]
-cuerpo:
-  - tipo: textarea
+body:
+  - type: textarea
     id: expected-behaviour
-    atributos:
-      etiqueta: "Comportamiento esperado"
-      descripción: Por favor, ingrese una descripción detallada del comportamiento esperado
+    attributes:
+      label: "Comportamiento esperado"
+      description: Por favor, ingrese una descripción detallada del comportamiento esperado
       placeholder: Descripción breve y detallada del comportamiento esperado...
-    validaciones:
-      requerido: true
-  - tipo: input
+    validations:
+      required: true
+  - type: input
     id: current-behaviour
-    atributos:
-      etiqueta: "Comportamiento actual"
-      descripción: Por favor, ingrese una descripción detallada del comportamiento actual
+    attributes:
+      label: "Comportamiento actual"
+      description: Por favor, ingrese una descripción detallada del comportamiento actual
       placeholder: Descripción breve y detallada del comportamiento actual...
-    validaciones:
-      requerido: true
-  - tipo: textarea
+    validations:
+      required: true
+  - type: textarea
     id: reprod
-    atributos:
-      etiqueta: "Pasos para reproducir el problema"
-      descripción: Por favor, ingrese una descripción explícita de su problema
+    attributes:
+      label: "Pasos a reproducir"
+      description: Please enter an explicit description of your issue
       value: |
         1. Ir a '...'
         2. Hacer clic en '....'
-        3. Desplazarse hasta '....'
+        3. Desplázate hasta '....'
         4. Ver error
-      renderizado: bash
-    validaciones:
-      requerido: true
-  - tipo: textarea
+      render: bash
+    validations:
+      required: true
+  - type: textarea
     id: screenshot
-    atributos:
-      etiqueta: "Evidencias"
-      descripción: Si corresponde, agregue capturas de pantalla para ayudar a explicar su problema.
+    attributes:
+      label: "Evidencias"
+      description: If applicable, add screenshots to help explain your problem.
       value: |
-        ![DESCRIPCIÓN](ENLACE.png)
-      renderizado: bash
-    validaciones:
-      requerido: false
-  - tipo: textarea
+        ![DESCRIPTION](LINK.png)
+      render: bash
+    validations:
+      required: false
+  - type: textarea
     id: logs
-    atributos:
-      etiqueta: "Registros"
-      descripción: Copie y pegue cualquier salida de registro relevante. Esto se formateará automáticamente en código, por lo que no es necesario utilizar las comillas invertidas.
-      renderizado: bash
-    validaciones:
-      requerido: false
-  - tipo: dropdown
+    attributes:
+      label: "Logs"
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: bash
+    validations:
+      required: false
+  - type: dropdown
     id: browsers
-    atributos:
-      etiqueta: "Navegadores"
-      descripción: ¿En qué navegadores está experimentando el problema?
-      múltiple: true
-      opciones:
+    attributes:
+      label: "Navegadores"
+      description: ¿En qué navegadores estás experimentando el problema?
+      multiple: true
+      options:
         - Firefox
         - Chrome
         - Safari
         - Microsoft Edge
         - Opera
-    validaciones:
-      requerido: false
-  - tipo: dropdown
+    validations:
+      required: false
+  - type: dropdown
     id: os
-    atributos:
-      etiqueta: "Sistema operativo"
-      descripción: ¿Cuál es el sistema operativo afectado?
-      múltiple: true
-      opciones:
+    attributes:
+      label: "OS"
+      description: What is the impacted environment ?
+      multiple: true
+      options:
         - Windows
         - Linux
         - Mac
-    validaciones:
-      requerido: false
+    validations:
+      required: false
