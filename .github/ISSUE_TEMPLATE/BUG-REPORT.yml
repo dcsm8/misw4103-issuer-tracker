@@ -13,7 +13,7 @@ body:
       placeholder: Descripción breve y detallada del comportamiento esperado...
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: current-behaviour
     attributes:
       label: "Comportamiento actual"
